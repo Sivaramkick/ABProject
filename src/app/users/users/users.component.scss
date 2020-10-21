@@ -1,0 +1,148 @@
+.searchdiv {
+    height: 60px;
+    // background-color: #1960be;
+    // margin-top: 10px;
+    padding: 0px 10px;
+    vertical-align: bottom;
+    padding-top: 7px;
+    color: rgba(0, 0, 0, 0.575);
+  }
+  .searchdiv label {
+    font-size: 14px;
+  }
+  .searchdiv input,
+  .searchdiv select {
+    // height: 25px;
+    font-size: 12px;
+    padding: 4px;
+  }
+  .searchdiv input[type="button"] {
+    // padding: 0px 5px;
+  }
+  .searchdiv input[type="text"],
+  select {
+    width: 99%;
+  }
+  
+  @media only screen and (max-width: 650px) {
+    .searchdiv label {
+      font-size: 14px;
+    }
+    input[type="text"],
+    select {
+      width: 70% !important;
+    }
+    .searchdiv select {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 420px) {
+    .searchdiv label {
+      font-size: 12px;
+    }
+    input[type="text"],
+    select {
+      width: 70% !important;
+    }
+    .searchdiv select {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    .searchdiv label {
+      font-size: 10px;
+    }
+    input[type="text"],
+    select {
+      width: 70% !important;
+    }
+    .searchdiv select {
+      width: 100%;
+    }
+  }
+
+  // mat-icon-stepper selected color change 
+::ng-deep .mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+    background-color:rgba(0, 0, 0, 0.575)!important;
+}
+
+//input outline color
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color:rgba(0, 0, 0, 0.575)!important;
+    // opacity: 1!important;
+}
+
+//mat-input focused color
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color:rgba(0, 0, 0, 0.575)!important;
+}
+
+// mat-input error outline color
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick{
+    color:rgba(0, 0, 0, 0.575)!important;
+    opacity: 0.8!important;
+}
+
+// mat-input carent color
+::ng-deep .mat-input-element {
+    caret-color:rgba(0, 0, 0, 0.575)!important;
+}
+
+// mat-input error carent color
+::ng-deep .mat-form-field-invalid .mat-input-element, .mat-warn .mat-input-element {
+    caret-color:rgba(0, 0, 0, 0.575)!important;
+}
+
+// mat-label normal state style
+::ng-deep .mat-form-field-label {
+    color: rgba(0, 0, 0, 0.575)!important;
+    // color: $mainColor!important;
+}
+
+// mat-label focused style
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color:rgba(0, 0, 0, 0.575)!important;
+}
+
+// mat-label error style
+::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+    color:rgba(0, 0, 0, 0.575)!important;
+}
+ 
+::ng-deep .mat-checkbox-frame { 
+    border-color:  rgba(0, 0, 0, 0.575)!important;
+}
+::ng-deep .mat-fab.mat-primary, .mat-flat-button.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
+    background-color: #3f51b5;
+}
+
+
+// ::ng-deep .mat-form-field {
+//     font-size: 11px;
+//   }
+//   ::ng-deep .mat-form-field-type-mat-input {
+//     font-size: 11px;
+//   }
+::ng-deep .mat-select-value {
+    color: rgba(0, 0, 0, 0.87)!important;
+}
+::ng-deep .mat-select-placeholder {
+    color: orange !important;
+}
+  ::ng-deep .mat-select-panel {
+    font-size: 25px;
+  }
+
+  
+
+  ::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.4em 0px !important;}
+::ng-deep .mat-form-field-label-wrapper { top: -1.5em; }
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    transform: translateY(-1.1em) scale(.75);
+    width: 133.33333%;
+}
+
+::ng-deep mat-form-field{
+    width:100%;
+}

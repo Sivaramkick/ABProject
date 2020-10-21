@@ -1,0 +1,400 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import '~@swimlane/ngx-datatable/index.css';
+@import '~@swimlane/ngx-datatable/themes/material.scss';
+@import '~@swimlane/ngx-datatable/themes/dark.scss';
+@import '~@swimlane/ngx-datatable/themes/bootstrap.scss';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
+@import 'assets/fonts/fonts.scss';
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  .mat-checkbox-label {
+    font-weight: bold;
+  }
+  body {
+    margin: 0px !important;
+    font-family: robotoRegular, sans-serif;
+    font-style: normal !important;
+    color: #222222;
+    // background: url(./assets/images/login/pace_loginbg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-x: center;
+  }
+  
+  .fontL {
+    font-family: robotoThin, sans-serif;
+  }
+  
+  .fontM {
+    font-family: robotoRegular, sans-serif;
+  }
+  
+  .fontB {
+    font-family: robotoBold, sans-serif;
+  }
+  
+  .f12 {
+    font-size: 12px !important;
+  }
+  .font-14 {
+    font-size: 14px !important;
+  }
+  .font-18 {
+    font-size: 18px !important;
+  }
+  
+  .display-flex{
+    display: flex !important;
+  }
+  
+  .text-upper {
+    text-transform: uppercase;
+  }
+  
+  .text-lower {
+    text-transform: lowercase;
+  }
+  
+  img {
+    outline: none !important;
+  }
+  
+  // colors
+  
+  *.white {
+    color: #f5f5f5;
+  }
+  
+  *.blue {
+    color: #0093d1;
+  }
+  
+  *.alertText {
+    color: red;
+    font-weight: bold;
+    font-family: fontBold;
+  }
+  
+  .Error-Header {
+    font-size: 20px !important;
+    font-weight: bold !important;
+    font-family: fontSemiBold;
+    color: #222222;
+  }
+  
+  .sucessDialog > mat-dialog-container {
+    background: green !important;
+  }
+  
+  .warnDialog > mat-dialog-container {
+    background: rgb(240, 146, 6) !important;
+  }
+  
+  .mat-dialog-container {
+    overflow: hidden !important;
+  }
+  
+  .sidebar {
+    min-height: 100%;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px #ccc;
+    border-right: 1px solid #ccc;
+    float: left;
+    // z-index: -1;
+  }
+  
+  // .form-control {
+  //   border: 0;
+  //   box-shadow: none !important;
+  // }
+  
+  .center {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .left {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .right {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .arrow {
+    height: 30px;
+    background: #e0272e;
+    color: #fff;
+    position: relative;
+    width: 230px;
+    text-align: center;
+    line-height: 30px;
+    margin: 1% 0%;
+    font-size: 16px;
+  }
+  
+  .arrow:after {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    left: 99%;
+    top: -3px;
+    // border: 18px dotted transparent;
+    // border-left: 18px dotted #e0272e;
+    border-style: solid;
+    border: 18px dotted transparent;
+    border-left: 18px dotted #e0272e;
+  }
+  
+  .overlayDiv {
+    position: fixed;
+    /* Sit on top of the page content */
+    /* display: none; Hidden by default */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    z-index: 2;
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    /* Add a pointer on hover */
+  }
+  
+  .overlayDiv > .spinner {
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  
+  .moduleGrid .mat-select-arrow {
+    color: #ffffff !important;
+  }
+  
+  .moduleGrid .mat-select-value-text {
+    color: #ffffff !important;
+  }
+  
+  .mat-paginator-container {
+    min-height: 21px !important;
+    height: 46px;
+  }
+  
+  .ng-select .ng-select-container {
+    color: #000000 !important;
+  }
+  
+  .ng-select .ng-select-container:after {
+    border-bottom: none;
+  }
+  
+  .ng-select.ng-select-single .ng-select-container .ng-arrow-wrapper {
+    align-self: inherit !important;
+    bottom: 3px !important;
+  }
+  
+  .ng-select .ng-select-container .ng-value-container {
+    align-items: stretch !important;
+    padding: 0px !important;
+    border-top: 0px !important;
+  }
+  
+  .ng-select.ng-select-single .ng-select-container .ng-clear-wrapper {
+    align-self: inherit !important;
+    bottom: 3px !important;
+  }
+  
+  .ng-select .ng-select-container .ng-value-container .ng-input {
+    bottom: 30px !important;
+  }
+  
+  .ng-dropdown-panel.ng-select-bottom {
+    top: 26px !important;
+  }
+  
+  .ng-select {
+    padding-bottom: 0px !important;
+  }
+  
+  .overlay-left {
+    background-color: transparent !important;
+  }
+  
+  .overlay-right {
+    background-color: transparent !important;
+  }
+  
+  .image-cropper {
+    width: 89%;
+    padding-left: 30px;
+  }
+  
+  #slider-buttons-left {
+    margin-left: -57px;
+  }
+  
+  .dashtable {
+    overflow-x: hidden !important;
+  }
+  
+  .Dashmatcardheader > .mat-card-header-text {
+    width: 100%;
+  }
+  
+  // --------
+  
+  .serviceddl > .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+  }
+  
+  .serviceddl > .ng-select .ng-select-container .ng-value-container .ng-input > input {
+    box-sizing: content-box;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    outline: 0;
+    cursor: default;
+    width: 99% !important;
+    border: 1px solid #00000059 !important;
+  }
+  
+  .serviceddl > .ng-select.ng-select-single .ng-select-container .ng-arrow-wrapper {
+    bottom: 0px !important;
+    right: 5px;
+  }
+  
+  .serviceddl > .ng-select > .ng-dropdown-panel {
+    opacity: 0;
+    width: 94%;
+    left: 15px;
+  }
+  
+  .serviceddl > .ng-select .ng-select-container {
+    color: black !important;
+  }
+  
+  .serviceddl > .ng-select.ng-select-single .ng-select-container .ng-clear-wrapper {
+    bottom: 0px !important;
+  }
+  .mat-paginator-container {
+    min-height: 21px !important;
+    height: 46px;
+  }
+  .mat-tab-label {
+    width: 100%;
+    padding: 5px !important;
+    background-color: #e0272e;
+    color: #ffffff;
+    font-weight: 700;
+    height: 30px !important;
+  }
+  
+  /* Styles for the active tab label */
+  .mat-tab-label.mat-tab-label-active {
+    width: 100%;
+    padding: 5px;
+    background-color: #e0272e;
+    color: #ffffff;
+    font-weight: 700;
+    height: 30px;
+    opacity: initial !important;
+  }
+  
+  /* Styles for the ink bar */
+  .mat-ink-bar {
+    visibility: visible;
+    left: 0px;
+    width: 50%;
+  }
+  
+  .mat-tab-body-content {
+    background-color: #dee2e9;
+  }
+  
+  .fc-button-group {
+    padding: 12px !important;
+  }
+  
+  .fc-header-toolbar {
+    background: #9cb1d3 !important;
+  }
+  
+  .fc-toolbar.fc-header-toolbar {
+    margin-bottom: 0px;
+    height: 45px;
+  }
+  .fc-orange {
+    background-color: rgb(241, 168, 64);
+  }
+  .fc-yellow {
+    background-color: rgb(255, 255, 73);
+  }
+  .fc-green {
+    background-color: rgb(120, 216, 120);
+  }
+  .fc-voilet {
+    background-color: rgb(165, 121, 222);
+  }
+  .mat-tab-group.mat-primary .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled) {
+    background: #e0272e !important;
+  }
+  
+  ::ng-deep .mat-drawer-content {
+    position: relative;
+    z-index: 1;
+    /* display: block; */
+    height: 100%;
+    overflow: auto;
+}
+
+
+

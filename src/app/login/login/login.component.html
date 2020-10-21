@@ -1,0 +1,67 @@
+<div class="limiter">
+    <div class="container-login100">
+    <div class="wrap-login100">
+        <div  class="login100-form">
+            <span class="login100-form-title pb-5"> Login </span>
+             <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input matInput placeholder="Placeholder" [(ngModel)]="username">
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                        <mat-hint>Hint</mat-hint>
+                      </mat-form-field>
+                </div>
+             </div>
+             <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+                      <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="password">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                      </mat-form-field>
+                </div>
+             </div>
+             <div class="flex-sb-m p-t-15 p-b-20">
+                <div class="form-check">
+                    <mat-checkbox class="example-margin" [(ngModel)]="checked"> Remember me </mat-checkbox>
+                </div>
+                <div>
+                    <a class="txt1" href="#" >Forgot Password?</a>
+                </div>
+             </div>
+             <div class="container-login100-form-btn">
+                <button mat-flat-button class="login100-form-btn" color="primary" (click)="Login()">Login</button>
+             </div>
+             <div class="text-center p-t-30 p-b-20">
+                <span>or <a href="#">sign up</a> using</span>
+             </div>
+             <div class="login100-form-social flex-c-m">
+                <a href="#" title="Facebook" class="login100-form-social-item flex-c-m bg1 m-r-5">
+                    <i class="fa fa-facebook fa-2x"></i>
+                </a>
+                <a href="#" title="GMail"  class="login100-form-social-item flex-c-m bg1 m-r-5">
+                    <i class="fa fa-google fa-2x"></i>
+                </a>
+             </div>
+            </div>
+    </div>
+    <!-- <div  fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25">
+        <form fxLayoutAlign="stretch" fxLayout="column" class="login-form example-form">
+            <mat-toolbar color="primary">Login</mat-toolbar>
+            <mat-form-field>
+              <input matInput placeholder="User Name"  >
+            </mat-form-field>
+          
+            <mat-form-field>
+                <input matInput placeholder="Password"  >
+            </mat-form-field>
+            <button mat-raised-button type="submit" color="accent">Login</button>
+          </form>
+    </mat-card>
+</div> -->
+</div>
+</div>

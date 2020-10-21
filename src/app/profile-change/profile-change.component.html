@@ -1,0 +1,36 @@
+<div class="row" style="padding: 50px 50px 20px 50px;margin: 0px;">
+    <div class="col-6">
+      <!-- <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" roundCropper="true" format="png"
+      (imageCroppedBase64)="imageCroppedBase64($event)" (imageCroppedFile)="imageCroppedFile($event)" [maintainAspectRatio]="false"></image-cropper> -->
+      <!-- (imageCropped)="imageCropped($event)"
+          (imageCroppedBase64)="imageCroppedBase64($event)"
+        (imageCroppedFile)="imageCroppedFile($event)" -->
+
+        <image-cropper 
+                [imageChangedEvent]="imageChangedEvent" 
+                [maintainAspectRatio]="true" 
+                [aspectRatio]="4 / 4"
+                [resizeToWidth]="256" 
+                roundCropper="true"
+                format="png" 
+                (imageCropped)="imageCropped($event)" 
+                (imageLoaded)="imageLoaded()"
+                (cropperReady)="cropperReady()" 
+                (loadImageFailed)="loadImageFailed()"></image-cropper>
+  
+    </div>
+    <div class="col-6 croppedimg" >
+      <img [src]="croppedImage" class="pro-img"
+        onerror="this.src='https://servapi.onsitedealersolutions.com/Images/profile/profile.png'" />
+    </div>
+    <div class="col-12" style="text-align: center;">
+      <hr />
+      <input type="button" value="Save" title="Save" class="btn btn-sm btn-primary" (click)="btnSaveImage_click()">&nbsp;
+      <input type="button" value="Cancel" title="Cancel" class="btn btn-sm btn-danger" (click)="btnCancelImage_click()">
+    </div>
+  </div>
+  
+  <!-- <div class="overlayDiv" *ngIf="loading">
+    <mat-spinner class="spinner"></mat-spinner>
+  </div> -->
+  

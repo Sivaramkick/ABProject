@@ -1,0 +1,135 @@
+<div class="row">
+    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 mb-2"></div>
+    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 mb-2">
+<mat-card class="example-card">
+    <mat-card-header> 
+      <mat-card-title>Add Users</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mb-2 mb-2">
+                <mat-form-field appearance="outline">
+                    <mat-label>First name*</mat-label>
+                    <input matInput placeholder="Placeholder"  >
+                    <mat-icon matSuffix>face</mat-icon>
+                  </mat-form-field>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mb-2 mb-2">
+                <mat-form-field appearance="outline">
+                    <mat-label>Middle name</mat-label>
+                    <input style="width:50px;" matInput placeholder="Placeholder"  >
+                    <mat-icon matSuffix>face</mat-icon>
+                  </mat-form-field>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 mb-2 mb-2">
+                <mat-form-field appearance="outline">
+                    <mat-label>Last name*</mat-label>
+                    <input matInput placeholder="Placeholder"  >
+                    <mat-icon matSuffix>face</mat-icon>
+                  </mat-form-field>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-2 mb-2">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email*</mat-label>
+                    <input matInput placeholder="Ex. pat@example.com"  >
+                    <mat-icon matSuffix>mail</mat-icon>
+                  </mat-form-field>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-2 mb-2">
+                <mat-form-field appearance="outline">
+                    <mat-label>UserID*</mat-label>
+                    <input matInput placeholder="Placeholder"  >
+                    <mat-icon matSuffix>face</mat-icon>
+                  </mat-form-field>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-2 mb-2">
+                <mat-form-field appearance="outline">
+                    <mat-label>Password*</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" >
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                  </mat-form-field>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-2 mb-2">
+                <mat-form-field appearance="outline">
+                    <mat-label>Confirm Password*</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" >
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                  </mat-form-field>
+                
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-2 mb-2">
+              <mat-form-field appearance="outline">
+                <mat-select>
+                  <mat-option>-- Select --</mat-option>                  
+                    <mat-option *ngFor="let role of Roles" value="role.id">{{role.name}}</mat-option>                   
+                </mat-select>
+                <mat-label><mat-icon matSuffix>face</mat-icon> Role*</mat-label>
+              </mat-form-field>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-2 mb-2">
+              <mat-form-field appearance="outline">
+                <mat-select>
+                  <mat-option>-- Select --</mat-option>                  
+                    <mat-option *ngFor="let role of Roles" value="role.id">{{role.name}}</mat-option>                   
+                </mat-select>
+                <mat-label><mat-icon matSuffix>face</mat-icon> Designation*</mat-label>
+              </mat-form-field>
+            </div>
+         </div>
+         <div class="row">
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-2 mb-2">
+            <mat-form-field appearance="outline">
+              <mat-select>
+                <mat-option>-- Select --</mat-option>                  
+                  <mat-option *ngFor="let role of Roles" value="role.id">{{role.name}}</mat-option>                   
+              </mat-select>
+              <mat-label><mat-icon>face</mat-icon> Company*</mat-label>
+            </mat-form-field>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-2 mb-2">
+
+            <input type="file" (change)="profileChange_click($event)" style="display: none;" #file>&nbsp;&nbsp;
+            <img [src]="imgURL" width="60" height="60" class="pro-img"
+              onerror="this.src='https://servapi.onsitedealersolutions.com/Images/profile/profile.png'">
+            <i class="fa fa-camera" (click)="editStatus === 'V' ? '' : file.click()"
+              [attr.disabled]="editStatus === 'V' ? true : null" [class.disabled]="editStatus === 'V'"
+              aria-hidden="true" title="Browse"></i>
+            <i class="fa fa-times" aria-hidden="true"
+              *ngIf="imgURL !== '' && imgURL !== 'https://servapi.onsitedealersolutions.com/Images/profile/profile.png'"
+              (click)="editStatus === 'V' ? '' : deleteImage_click()"></i>
+
+        </div>
+        
+         </div>
+         <div class="row">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 mb-2 mb-2"></div>
+          <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 mb-2 mb-2">
+            <div class="row">
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-2 mb-2">
+                <button mat-flat-button class="login100-form-btn" color="primary" (click)="Submit()">Submit</button>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-2 mb-2">
+                <button mat-flat-button class="login100-form-btn" style="background: #c21818;" color="accent" (click)="Cancel()">Cancel</button>
+              </div>
+            </div>
+          
+          
+          </div>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 mb-2 mb-2"></div>
+         </div>
+    </mat-card-content>
+    <mat-card-actions> 
+    </mat-card-actions>
+</mat-card>
+    </div>
+    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 mb-2"></div>
+</div>
+ 

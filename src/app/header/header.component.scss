@@ -1,0 +1,34 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover, a:active{
+    color: lightgray;
+}
+
+.navigation-items{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+mat-toolbar{
+    border-radius: 3px;
+}
+
+@media(max-width: 959px){
+    mat-toolbar{
+        border-radius: 0px;
+    }
+}
+
+::ng-deep .mat-toolbar.mat-primary {
+    background: #343d45;
+    color: #fff;
+}
+
+::ng-deep .mat-drawer-container {
+    background-color: #f1f2f7;
+    color: #5b626b;
+}

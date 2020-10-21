@@ -1,0 +1,13 @@
+<app-layout>
+  <mat-sidenav-container>
+    <mat-sidenav  #sidenav mode="side" role="navigation" class="example-sidenav" [fixedInViewport]="false" [fixedTopGap]="2" [fixedBottomGap]="2">
+      <app-sidebar (sidenavClose)="sidenav.close()"></app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content  >
+      <app-header *ngIf="isLoggedIn" (sidenavToggle)="sidenav.toggle()"></app-header>
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</app-layout>
